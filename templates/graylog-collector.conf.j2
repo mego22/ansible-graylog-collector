@@ -1,0 +1,21 @@
+server-url = "{{ graylog_server }}:{{ graylog_server_port }}"
+enable-registration = true
+collector-id = "file:/etc/graylog/collector/collector-id"
+
+inputs {
+  triage-logs {
+    type = "file"
+    path-glob-root = "/srv/appliance/current/log"
+    path-glob-pattern = "*.log"
+    content-splitter = "PATTERN"
+    content-splitter-pattern = "^\\w{1},\\s\\[\\d{4}-\\d{2}-\\d{2}T"
+  }
+}
+
+outputs {
+  graylog-server {
+    type = "{{ graylog_outputs_type }}"
+    host = "{{ graylog_outputs_host }}"
+    port = {{ graylog_outputs_port }}
+  }
+}

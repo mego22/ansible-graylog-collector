@@ -1,0 +1,4 @@
+---
+
+- name: Start Graylog collector
+  service: name=graylog-collector state=started

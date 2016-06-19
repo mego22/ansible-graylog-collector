@@ -1,0 +1,6 @@
+---
+
+- name: Configure Graylog collector
+  template: src=graylog-collector.conf.j2  dest=/etc/graylog/collector/collector.conf
+  notify:
+  - restart graylog
