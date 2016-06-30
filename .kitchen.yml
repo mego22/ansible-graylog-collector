@@ -18,9 +18,11 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos7
+  - name: centos72
     driver:
       provider: vmware_fusion
+      box: boxcutter/centos72
+      boxurl: boxcutter/centos72
 
 suites:
 - name: default
