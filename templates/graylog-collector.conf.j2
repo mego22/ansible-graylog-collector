@@ -17,5 +17,10 @@ inputs {
 {% for output in graylog_outputs %}
 
 outputs {
-
+  {{ output.outputs_name }} {
+    type = "{{ output.outputs_type }}"
+    host = "{{ output.outputs_host }}"
+    port = {{ output.outputs_port }}
+  }
+}
 {% endfor %}

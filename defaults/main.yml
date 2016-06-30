@@ -15,6 +15,7 @@ graylog_inputs:
     content_splitter_pattern: "^\\w{1},\\s\\[\\d{4}-\\d{2}-\\d{2}T"
 
 graylog_outputs:
-  - outputs_type: gelf
+  - outputs_name: "default"
+    outputs_type: gelf
     outputs_host: 127.0.0.1
     outputs_port: 12201
