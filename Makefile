@@ -4,13 +4,13 @@
 # find bundle
 BUNDLE := $(shell which bundle)
 ifndef BUNDLE
-	$(error Bundler not installed: gem install bundler)
+  $(error Bundler not installed: gem install bundler)
 endif
 
 # find ansible-lint
 LINT := $(shell which ansible-lint)
 ifndef LINT
-	$(error ansible-lint not installed: pip install ansible-lint)
+  $(error ansible-lint not installed: pip install ansible-lint)
 endif
 
 help:
