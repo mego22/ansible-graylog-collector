@@ -1,5 +1,7 @@
 ---
 
+- name: Install Open JDK
+  yum: name=java-openjdk state=present
+
 - name: Install Graylog collector
   yum: name=https://packages.graylog2.org/repo/el/7Server/collector-latest/x86_64/graylog-collector-{{ graylog_collector_version }}-1.noarch.rpm state=present
-  environment: "{{ proxy_env }}"

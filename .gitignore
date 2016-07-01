@@ -1,0 +1,6 @@
+Gemfile.lock
+.vagrant
+*.retry
+.bundle/
+.kitchen/
+vendor/
